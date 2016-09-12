@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/loginreg.css"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<!--顶部-->
+<div id="login_header">
+    <div class="wrap">
+        <a href="index.html">
+            <img src="images/logo.png" alt=""/>
+        </a>
+        <b>注册</b>
+    </div>
+</div>
+<!--reg-->
+<div id="reg">
+    <div class="wrap">
+        <div class="tab">
+            <div class="tab-url">
+                <ul>
+                    <li id="phone"><a href="###">手机注册</a></li>
+                    <li id="mail"><a href="###">邮箱注册</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane clearfix" id="tab1">
+                   <div class="fl">
+                    <p>
+                        <span class="field-name">请输入验证码</span>
+                        <input type="text" id="input" placeholder="区分大小写" class="input input-yzm" onblur="validate()"><input type = "button" id="code" value="获取验证码" />
+                        <span id="code-check"></span>
+                    </p>
+                    <p>
+                        <span class="field-name">手机号</span>
+                        <input class="input input-phone" id="Phone_Mobile" name="Phone_Mobile" placeholder="请输入您的手机号" type="text" value="" >
+                        <span class="phone-check"></span>
+                    </p>
+                    <p>
+                        <span class="field-name">手机验证码</span>
+                        <input class="input input-yzm" id="Phone_VerifyCode" name="Phone_VerifyCode" placeholder="手机验证码" type="text" value="">
+                        <a href="javascript:void(0)" class="btn-yzm" id="Phone_SendCode">获取验证码</a>
+                        <span ></span>
+                    </p>
+                    <p>
+                        <span class="field-name">设置密码</span>
+                        <input class="input input-key" id="Phone_Password" name="Phone_Password" placeholder="密码必须是6-20位字母或数字" type="password">
+                        <span  class="psw-check"></span>
+                    </p>
+                    <p>
+                        <span class="field-name">确认密码</span>
+                        <input class="input input-key" id="Phone_ConfimPassword" name="Phone_ConfimPassword" placeholder="再次输入密码" type="password">
+                        <span class="psw-check2"></span>
+                    </p>
+                    <p>
+                        <span class="field-name">邀请码</span>
+                        <input class="input input-key" id="Phone_AtCode" name="Phone_AtCode" placeholder="邀请码" type="text" value="">
+                        <span></span>
+                    </p>
+                    <p>
+                        <span class="field-name">&nbsp;</span><label><input type="checkbox" id="tab1chk" checked="checked">我已阅读并同意<a href="javascript:void(0)" class="green btn-protocol">《易果服务协议》</a><span></span></label>
+
+                    </p>
+                    <span></span>
+                    <p><span class="field-name">&nbsp;</span><a href="javascript:void(0)" class="btn-green-l" id="PhoneReg">立即注册</a></p>
+                </div>
+                </div>
+                <div class="tab-pane clearfix" id="tab2">
+                    <div class="fl">
+                        <p>
+                            <span class="field-name">图形验证码</span>
+                            <input type="text" id="verficode_tab2" placeholder="图形验证码" class="input input-yzm" /><img src="images/verifycode.jpg " id="imgcode" ><a href="javascript:void(0)" class="gray">换一张</a>
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">邮箱</span>
+                            <input class="input input-mail" id="Email" name="Email" placeholder="请输入您的邮箱" type="text" value="" />
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">设置密码</span>
+                            <input class="input input-key" id="Email_Password" name="Email_Password" placeholder="6-20位字母、符号或数字" type="password" />
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">确认密码</span>
+                            <input class="input input-key" id="Email_ConfimPassword" name="Email_ConfimPassword" placeholder="再次输入密码" type="password" />
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">手机号</span>
+                            <input class="input input-phone" id="Email_Mobile" name="Email_Mobile" placeholder="请输入您的手机号" type="text" value="" />
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">手机验证码</span>
+                            <input class="input input-yzm" id="Email_VerifyCode" name="Email_VerifyCode" placeholder="手机验证码" type="text" value="" />
+                            <a href="javascript:void(0)" class="btn-yzm" id="Email_SendCode">获取验证码</a>
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">邀请码</span>
+                            <input class="input input-key" id="Email_AtCode" name="Email_AtCode" placeholder="邀请码" type="text" value="" />
+                            <span></span>
+                        </p>
+                        <p>
+                            <span class="field-name">&nbsp;</span><label><input type="checkbox" id="tab2chk" checked="checked" />我已阅读并同意<a href="javascript:void(0)" class="green btn-protocol">《易果服务协议》</a><span></span></label>
+                        </p>
+                        <p><span class="field-name">&nbsp;</span><a href="javascript:void(0)" class="btn-green-l" id="EmailReg">立即注册</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                我已经注册，现在就 <a class="orange" href="login.html">登录</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div id="footer">
+    <div class="wrap">
+        <dl class="col1">
+            <dt>新手指南</dt>
+            <dd>
+                <p><a href="">账户注册</a></p>
+                <p><a href="">购物流程</a></p>
+                <p><a href="">订购方式</a></p>
+                <p><a href="">悠币说明</a></p>
+                <p><a href="">会员等级</a></p>
+
+            </dd>
+        </dl>
+        <dl class="col2">
+            <dt>付款方式</dt>
+            <dd>
+                <p><a href="">支付方式</a>/<a href="">发票说明</a></p>
+                <p><a href="">充值说明</a>/<a href="">储值卡说明</a></p>
+                <p><a href="">优惠代码/礼品卡说明</a></p>
+                <p><a href="">卡券购买章程</a></p>
+            </dd>
+        </dl>
+        <dl class="col3">
+            <dt>配送方式</dt>
+            <dd>
+                <p><a href="">配送运费</a></p>
+                <p><a href="">配送范围</a></p>
+                <p><a href="">配送时间</a></p>
+            </dd>
+        </dl>
+        <dl class="col4">
+            <dt>售后服务</dt>
+            <dd>
+                <p><a href="">退换货政策</a></p>
+                <p><a href="">退换货流程</a></p>
+                <p><a href="">常见问题</a></p>
+                <p><a href="">投诉与建议</a></p>
+            </dd>
+        </dl>
+        <dl class="col5">
+            <dt>关于我们</dt>
+            <dd>
+                <p><a href="/">公司介绍</a></p>
+                <p><a href="">联系我们</a></p>
+                <p><a href="">业务合作</a></p>
+                <p><a href="">诚信举报</a></p>
+                <p><a href="" target="_blank" rel="nofollow">人才招聘</a></p>
+                <p><a href="">友情链接</a></p>
+
+            </dd>
+        </dl>
+        <div class="service">
+            <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+            <span>周一至周日 9:00-21:00</span>
+        </div>
+        <div class="copyright">
+            <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+            <p>沪ICP备09008015号 Copyright © 2005-2016 <a href="">上海易果电子商务有限公司</a>版权所有</p>
+            <p class="authentication">
+                <a href="#" target="_blank" rel="nofollow"><img src="picture/footer_all.png" width="40px" height="47px"></a>
+                <a href="#" target="_blank"><img src="picture/footer_copy.gif" ></a>
+                <a target="_blank" href="#" ><img src="picture/footer_ghs.png" alt=""/> <span >沪公网安备 31010502000002号</span></a>
+
+            </p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/code.js"></script>
+<script>
+    //tab切换
+    $("#phone").on("click",function(){
+        $("#tab2").css("display","none");
+        $("#tab1").css("display","block");
+        $("#phone").css({"height":"44px","border-top":"2px solid #008842"});
+        $("#mail").css({"height":"44px","border-top":"1px solid #008842"});
+    })
+    $("#mail").on("click", function () {
+        $("#tab1").css("display","none");
+        $("#tab2").css("display","block");
+        $("#mail").css({"height":"44px","border-top":"2px solid #008842"});
+        $("#phone").css({"height":"44px","border-top":"1px solid #008842"});
+    })
+    //注册信息
+    var flag_phone=false;
+    var flag_psw1=false;
+    var flag_psw2=false;
+    $("#Phone_Mobile").on("blur",function() {
+        var ajaxId = $("#Phone_Mobile").val();
+      //  var ajaxPsw = $("#Phone_Password").val();
+        var phone_check=/^1\d{10}$|^(0\d{2,3}-?|\(0\d{2,3}\))?[1-9]\d{4,7}(-\d{1,8})?$/;
+        if(phone_check.test(ajaxId)){
+            $.ajax({
+                url:"http://10.9.163.54:8080/product/GetProductById_get?id="+ajaxId,
+                success:datafn
+            })
+            function datafn(result){
+                if(result=="null"){
+                    $(".phone-check").css("color","green");
+                    $(".phone-check").html("√此号码可用");
+                    flag_phone=true;
+                }else{
+                    $(".phone-check").css("color","red");
+                    $(".phone-check").html("*用户名已被注册！");
+                    flag_phone=false;
+                }
+            }
+        }else{
+            $(".phone-check").html("*请填写正确的手机号!");
+            $(".phone-check").css("color","red");
+            flag_phone=false;
+        }
+    });
+    //验证密码
+    $("#Phone_Password").on("blur",function() {
+        psd1=$("#Phone_Password").val();
+        var flagZM=false ;
+        var flagSZ=false ;
+        var flagQT=false ;
+        if(psd1.length<6 || psd1.length>12){
+            $(".psw-check").html("*长度错误");
+            $(".psw-check").css("color","red");
+            flag_psw1=false;
+        }else
+        {
+            for(i=0;i < psd1.length;i++)
+            {
+                if((psd1.charAt(i) >= 'A' && psd1.charAt(i)<='Z') || (psd1.charAt(i)>='a' && psd1.charAt(i)<='z'))
+                {
+                    flagZM=true;
+                }
+                else if(psd1.charAt(i)>='0' && psd1.charAt(i)<='9')
+                {
+                    flagSZ=true;
+                }else
+                {
+                    flagQT=true;
+                }
+            }
+            if(!flagZM||!flagSZ||flagQT){
+                $(".psw-check").html("*密码必须是字母数字的组合");
+                $(".psw-check").css("color","red");
+                flag_psw1=false;
+            }else{
+                $(".psw-check").html("√输入正确");
+                $(".psw-check").css("color","green");
+                flag_psw1=true;
+            }
+
+        }
+    })
+    //验证确认密码 
+    $("#Phone_ConfimPassword").on("blur",function() {
+        psw1=$("#Phone_Password").val();
+        psw2=$("#Phone_ConfimPassword").val();
+        console.log(psw1+"  "+psw2)
+        if(psw1!=psw2||psw2=="") {
+            $(".psw-check2").html("*您两次输入的密码不一样");
+            $(".psw-check2").css("color","red");
+            flag_psw2=false;
+        }else 
+        {
+            $(".psw-check2").html("√确认成功");
+            $(".psw-check2").css("color","green");
+            flag_psw2=true;
+        }
+    })
+    //验证邮箱
+    function checkmail(){
+        apos=form1.youremail.value.indexOf("@");
+        dotpos=form1.youremail.value.lastIndexOf(".");
+        if (apos<1||dotpos-apos<2)
+        {
+            divmail.innerHTML='<font class="tips_false">输入错误</font>' ;
+        }
+        else {
+            divmail.innerHTML='<font class="tips_true">输入正确</font>' ;
+        }
+    }
+    //
+    $("#PhoneReg").on("click", function () {
+        if((flag_phone==true)&&(flag_psw1==true)&&(flag_psw2==true)&&(flag_code==true)){
+            addUser();
+        }else{
+            alert("请正确填写信息☺");
+        }
+
+    })
+    //用户信息提交至服务器
+    function addUser(ajaxId,ajaxPsw){
+        var ajaxId = $("#Phone_Mobile").val();
+        var ajaxPsw = $("#Phone_Password").val();
+        var ajaxurl = "http://10.9.163.54:8080/product/CreateUpdateProduct_get";
+        var ajaxDataJson = {
+            user: ajaxId,
+            psw: ajaxPsw
+        }
+        var dataStr = JSON.stringify(ajaxDataJson);
+        $.ajax({
+            url: ajaxurl,
+            data: {
+                id: ajaxId,
+                datajson: dataStr
+            },
+            success:callback
+        });
+        function callback(result){
+            alert("注册成功");
+        }
+    }
+
+</script>
+</body>
+</html>
